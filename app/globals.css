@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.about-bg-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  isolation: isolate;
+  opacity: 10%;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding-top: 200px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+.button-style {
+  @apply mt-6 bg-purple-600 px-6 py-2 rounded
+}
+.contact-section {
+  @apply bg-black text-white py-24 px-6 text-center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.contact-title {
+  @apply text-3xl md:text-4xl font-bold tracking-widest;
+}
+
+.common-line {
+  width: 220px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, red, yellow, green, blue, purple);
+}
+
+
+.contact-form {
+  @apply flex flex-col md:flex-row gap-6 mt-12 items-end justify-center;
+}
+
+
+.contact-field {
+  @apply flex flex-col text-left w-full md:w-[240px];
+}
+
+.contact-field label {
+  @apply text-xs mb-1 text-gray-400;
+}
+
+.contact-field input {
+  @apply bg-transparent border border-gray-700 px-4 py-2 outline-none text-white;
+  transition: all 0.3s ease;
+}
+
+
+.contact-field input:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+}
+
+
+.contact-btn {
+  @apply px-8 py-2 text-sm font-semibold tracking-wider;
+  background: linear-gradient(135deg, #9333ea, #7e22ce);
+  height: 42px;
+  transition: 0.3s ease;
+}
+
+
+.contact-btn:hover {
+  background: #0B0045
+}
+
+
+.contact-info {
+  @apply flex flex-col md:flex-row justify-center gap-8 mt-12 text-sm text-gray-400;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: "flex justify-between px-6 py-4";
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(74, 124, 89, 0.12);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--sage);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+body {
+
+  background: black;
+  color: white;
+}
