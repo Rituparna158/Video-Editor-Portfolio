@@ -1,7 +1,8 @@
 import Image from "next/image";
+//import ScrollToTop from "./ScrollToTop";
 export default function Contact(){
     return (
-        <section id = "contact" className="contact-section">
+        <section id = "contact" className="contact-section relative">
             
             <h2 className="contact-title">
                 I AM READY TO CONSULT YOU
@@ -57,6 +58,7 @@ export default function Contact(){
         </div>
  
         </div>
+        {/* <ScrollToTop /> */}
         </section>
     )
 }

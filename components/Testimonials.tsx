@@ -12,14 +12,17 @@ export default function Testimonials(){
 
             <div className="common-line" />
 
-            <div className="flex flex-wrap justify-center gap-6 mt-10 px-6">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mt-10">
                 {data.map((t,i)=>(
                     <div
                     key={i}
-                    className="p-6
-                        bg-gradient-to-b from-purple-600 to-purple-900 
-                        aspect-square w-[240px] flex flex-col justify-center items-center
-                        "
+                    className=" p-6
+                    w-full sm:w-[260px]
+                    bg-gradient-to-b from-purple-600 to-purple-900
+                    flex flex-col justify-center items-center
+                    min-h-[220px]
+                    transition duration-300 hover:scale-105
+                                "
                     >
                         <h3 className="text-lg font-bold tracking-wide">
                             {t.name}

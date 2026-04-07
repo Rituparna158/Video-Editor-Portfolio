@@ -16,9 +16,7 @@ export default function Portfolio() {
 
         <h2 className="text-[48px] font-extrabold tracking-[0.3em] leading-tight text-left">
             MY BEST EDITS
-        </h2>
-
-        
+        </h2>     
          
       <div className="mt-3 h-[3px] w-[300px]
                       bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 to-purple-500">

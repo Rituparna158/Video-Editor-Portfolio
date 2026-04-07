@@ -16,7 +16,7 @@ export default function About() {
 
             <div className="common-line" />
 
-            <p className="max-w-xl mx-auto mt-4 text-gray-400">
+            <p className="max-w-3xl mx-auto mt-4 text-gray-400">
                 Welcome to the cinematic realm of Jimmy, where creativity meets technology to craft visually stunning narratives. 
                 With a passion for storytelling and a keen eye for detail, I embark on a journey to transform ordinary footage into extraordinary visual experiences.
             </p>
