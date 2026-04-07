@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Contact(){
     return (
         <section id = "contact" className="contact-section">
@@ -38,9 +39,23 @@ export default function Contact(){
             </div>
 
             <div className="contact-info">
-                <span>92 455 478 112</span>
-                <span> Defense Phase 3, Lahore Pakistan</span>
-                <span>Videoeditor@gmail.com</span>
+                <div className="flex items-center gap-2">
+          <Image src="/Call.png" alt="phone" width={18} height={18} />
+          <span>92 455 478 112</span>
+        </div>
+ 
+    
+        <div className="flex items-center gap-2">
+          <Image src="/Vector.png" alt="location" width={18} height={18} />
+          <span>Defense Phase 3, Lahore Pakistan</span>
+        </div>
+ 
+        
+        <div className="flex items-center gap-2">
+          <Image src="/email-icon.png" alt="email" width={18} height={18} />
+          <span>Videoeditor@gmail.com</span>
+        </div>
+ 
                 </div>
         </section>
     )
