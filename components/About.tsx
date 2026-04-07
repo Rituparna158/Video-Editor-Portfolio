@@ -12,7 +12,7 @@ export default function About() {
             className="about-bg-img"
             />
 
-            <h2 className="text-3xl font-bold">ABOUT ME</h2>
+            <h2 className="text-5xl font-bold">ABOUT ME</h2>
 
             <div className="common-line" />
 
@@ -40,7 +40,7 @@ export default function About() {
                     <Image
                         src={item === 1 ? "/about-2.png" : "/about-1.png"}
                         alt="about animation"
-                        width={400}
+                        width={900}
                         height={400}
                         className="object-contain"
                     />

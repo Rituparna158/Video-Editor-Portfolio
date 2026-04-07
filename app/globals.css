@@ -55,7 +55,7 @@ html{
 }
 
 .contact-title {
-  @apply text-3xl md:text-4xl font-bold tracking-widest;
+  @apply text-4xl md:text-4xl font-bold tracking-widest;
 }
 
 .common-line {
@@ -85,13 +85,6 @@ html{
   @apply bg-transparent border border-gray-700 px-4 py-2 outline-none text-white;
   transition: all 0.3s ease;
 }
-
-
-.contact-field input:focus {
-  border-color: #a855f7;
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
-}
-
 
 .contact-btn {
   @apply px-8 py-2 text-sm font-semibold tracking-wider;

@@ -28,15 +28,17 @@ export default function Hero(){
                 LET&apos;S TALK
             </button>
             </div>
-                  <div className="absolute right-[8%] top-[60%] -translate-y-1/2 w-[420px] h-[520px] z-10">
+        <div className="absolute right-[8%] top-[60%] -translate-y-1/2 w-[420px] h-[520px] z-10">
 
-{/*        
-        <Image
-          src="/current-left.png"
+       
+        {/* <Image
+          src="/lightning-1.png"
           alt="lightning"
           fill
-          className="object-contain scale-150 opacity-90 -z-10"
+          className="object-contain scale-150 opacity-70 -z-10
+          mix-blend-screen filter hue-rotate-[260deg] saturate-300 brightness-150"
         /> */}
+        
 
         <Image
           src="/hero-person.png"
@@ -51,17 +53,17 @@ export default function Hero(){
         <Image
           src="/hero-cutout-1.png"
           alt="pr"
-          width={200}
-          height={200}
-          className="absolute  top-[-10px] left-[-60px]"
+          width={220}
+          height={220}
+          className="absolute  top-[-20px] left-[-80px]"
           
         />
         <Image
           src="/hero-cutout-2.png"
           alt="ae"
-          width={180}
-          height={150}
-          className="absolute top-[120px] right-[-40px]"
+          width={160}
+          height={140}
+          className="absolute top-[140px] right-[-60px]"
           
         />
 

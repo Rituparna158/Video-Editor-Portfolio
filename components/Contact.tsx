@@ -56,7 +56,7 @@ export default function Contact(){
           <span>Videoeditor@gmail.com</span>
         </div>
  
-                </div>
+        </div>
         </section>
     )
 }

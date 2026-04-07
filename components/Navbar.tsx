@@ -35,7 +35,8 @@ export default function Navbar() {
           <Image
             src="/social-handle.png"   
             alt="social"
-            fill
+            width={120}
+            height={30}
             className="object-cover"
           />
  
