@@ -1,40 +1,89 @@
+"use client";
+
 import Image from "next/image";
-import { videoProps } from "@/types/video.type";
-export default function VideoCard({src,icon}: videoProps){
-    return (
-        <div className="min-w-[250px] h-[250px] aspect-square rounded-xl overflow-hidden group relative cursor-point">
-            <Image
-            src={src}
-            alt="edit"
-            width={180}
-            height={180}
-            className="w-full h-full object-cover"
-            />
+import { motion } from "framer-motion";
 
-            <Image
-            src={icon}
-            alt="play"
-            width={70}
-            height={40}
-            />
+type Props = {
+  src: string;
+  icon: string;
+  title: string;
+};
 
-            <div className="absolute inset-0 flex items-center justify-center transition group-hover:opacity-0">
-                <Image src={icon} alt="play" width={50} height={50} />
-            </div>
+export default function VideoCard({ src, icon, title }: Props) {
+  return (
+    <div className="flex flex-col items-center gap-3">
 
-            <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-                <div className="border-2 border-purple-500 px-6 py-6 flex flex-col items-center gap-3">
-                    <Image
-                    src={icon}
-                    alt="play"
-                    width={60}
-                    height={60}
-                    />
-                    <span className="text-white font-semibold tracking-wide">
-                        PLAY VIDEO
-                    </span>
-                </div>
-            </div>
+      <motion.div
+        className="w-[260px] aspect-square relative overflow-hidden cursor-pointer"
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+      >
+
+        
+        <Image
+          src={src}
+          alt="video"
+          width={300}
+          height={300}
+          className="w-full h-full object-cover"
+        />
+
+       
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center z-10"
+          variants={{
+            rest: { opacity: 1 },
+            hover: { opacity: 0 },
+          }}
+        >
+          <Image src={icon} alt="play" width={200} height={120} />
+        </motion.div>
+
+       
+        <motion.div
+          className="absolute inset-[2px] bg-black/50 border-[5px] border-purple-500 flex items-center justify-center z-20"
+          variants={{
+            rest: { opacity: 0 },
+            hover: { opacity: 1 },
+          }}
+          transition={{ duration: 0.3 }}
+        >
+
+          <div className="flex flex-col items-center justify-center gap-2">
+
+ 
+        <motion.div
+            variants={{
+            rest: { y: 60, opacity: 0 },
+            hover: { y: 0, opacity: 1 },
+            }}
+            transition={{ duration: 0.4 }}
+        >
+            <Image src={icon} alt="play" width={200} height={200} />
+        </motion.div>
+
+        
+        <motion.span
+            className="text-white font-semibold tracking-wider text-lg"
+            variants={{
+            rest: { y: -60, opacity: 0 },
+            hover: { y: 0, opacity: 1 },
+            }}
+            transition={{ duration: 0.4 }}
+        >
+            PLAY VIDEO
+        </motion.span>
+
         </div>
-    )
+
+        </motion.div>
+
+      </motion.div>
+
+      <h3 className="text-white font-semibold tracking-widest text-sm">
+        {title}
+      </h3>
+    </div>
+  );
 }

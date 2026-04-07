@@ -7,16 +7,19 @@ const data: T[] = [
 ]
 export default function Testimonials(){
     return(
-        <section className="py-24 text-center">
+        <section id="testimonials" className="py-16 text-center">
             <h2 className="text-3xl font-bold tracking-widest">TESTIMONIALS</h2>
 
             <div className="common-line" />
 
-            <div className="grid md:grid-cols-3 gap-10 mt-16 px-6">
+            <div className="flex flex-wrap justify-center gap-6 mt-10 px-6">
                 {data.map((t,i)=>(
                     <div
                     key={i}
-                    className="p-8 text-center rounded-lg bg-gradient-to-b from-purple-600 to-purple-900 shadow-[0_0_40px_rga(168,85,247,0,4)]"
+                    className="p-6
+                        bg-gradient-to-b from-purple-600 to-purple-900 
+                        aspect-square w-[240px] flex flex-col justify-center items-center
+                        "
                     >
                         <h3 className="text-lg font-bold tracking-wide">
                             {t.name}

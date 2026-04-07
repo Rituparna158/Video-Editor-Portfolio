@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -10,24 +10,38 @@ export default function Navbar() {
         VideoAlchemist
       </Link>
 
-      {/* LINKS */}
+
       <ul className="nav-links">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="#home">Home</Link>
         </li>
         <li>
-          <Link href="/features">About</Link>
+          <Link href="#about">About</Link>
         </li>
         <li>
-          <Link href="/pricing">Portfolios</Link>
+          <Link href="#portfolio">Portfolios</Link>
         </li>
         <li>
-          <Link href="/blog">Testimonials</Link>
+          <Link href="#testimonials">Testimonials</Link>
         </li>
         <li>
-          <Link href="/dashboard">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </li>
+        
       </ul>
+      
+        <div className="relative ">
+ 
+          <Image
+            src="/social-handle.png"   
+            alt="social"
+            fill
+            className="object-cover"
+          />
+ 
+        </div>
+     
+ 
     </nav>
   );
 }

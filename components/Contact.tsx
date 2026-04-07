@@ -1,6 +1,6 @@
 export default function Contact(){
     return (
-        <section className="contact-section">
+        <section id = "contact" className="contact-section">
             
             <h2 className="contact-title">
                 I AM READY TO CONSULT YOU
